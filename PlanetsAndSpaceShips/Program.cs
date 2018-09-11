@@ -37,7 +37,33 @@ namespace PlanetsAndSpaceShips
                 Console.WriteLine(planet);
             }
 
-           // Console.WriteLine(planetList);
+         
+            var spaceCrafts = new Dictionary<string, string>();
+        
+
+            spaceCrafts.Add("Mariner 10", "Mars");
+            spaceCrafts.Add("Messenger", "Mars");
+            spaceCrafts.Add("Mariner 1", "Venus");
+            spaceCrafts.Add("Mariner 2", "Venus");
+            spaceCrafts.Add("Pioneer 10", "Jupiter");
+            spaceCrafts.Add("Voyager 11", "Jupiter");
+            spaceCrafts.Add("Juno", "Jupiter");
+
+            foreach (string planet in planetList)
+            {
+                foreach (var spacecraft in spaceCrafts)
+                {
+                    if (spacecraft.Value == planet)
+                    {
+                        Console.WriteLine($"{planet}:{spacecraft.Key}");
+                    } 
+                }
+            }
+
+
+
+
+            // Console.WriteLine(planetList);
             Console.ReadLine();
 
         }
